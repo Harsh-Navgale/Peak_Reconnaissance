@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recon Tool</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+    <h1>Recon Tool</h1>
+    <form id="recon-form">
+        <input type="text" id="domain" placeholder="Enter Domain (e.g., example.com)" required>
+        <select id="task" required>
+            <option value="" disabled selected>Select Recon Task</option>
+            <option value="enumeration">Subdomain Enumeration</option>
+            <option value="domain_resolve">Domain Resolution</option>
+            <option value="port_scan">Port Scan</option>
+            <option value="http_probe">HTTP Probe</option>
+            <option value="takeover">Subdomain Takeover</option>
+            <option value="nuclei">Nuclei Scan</option>
+            <option value="waybackurl">Wayback URL Extraction</option>
+        </select>
+        <button type="submit">Run Task</button>
+    </form>
+    <div id="console-output">Console output will appear here...</div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
